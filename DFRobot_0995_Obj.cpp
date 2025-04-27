@@ -80,11 +80,10 @@ void	DFRobot_0995_Obj::fillRect(rect* inRect,colorObj* inColor)													{ th
 void	DFRobot_0995_Obj::drawRect(rect* inRect,colorObj* inColor)													{ theTFT->drawRect(gX(inRect->x),gY(inRect->y), inRect->width, inRect->height,sDim(inColor)->getColor16()); }
 void	DFRobot_0995_Obj::fillRoundRect(int x,int y,int width,int height,int radius,colorObj* inColor)	{ theTFT->fillRoundRect(gX(x),gY(y),width,height,radius,sDim(inColor)->getColor16()); }
 void	DFRobot_0995_Obj::drawRoundRect(int x,int y,int width,int height,int radius,colorObj* inColor)	{ theTFT->drawRoundRect(gX(x),gY(y),width,height,radius,sDim(inColor)->getColor16()); }
-void	DFRobot_0995_Obj::drawCircle(int x,int y,int diam, colorObj* inColor)									{ drawRoundRect(gX(x),gY(y),diam,diam,diam/2,inColor); }
-void	DFRobot_0995_Obj::drawCircleHelper(int x,int y,int rad,byte corner,colorObj* inColor)				{ theTFT->drawCircleHelper(gX(x),gY(y),rad,corner,inColor->getColor16()); }
-void	DFRobot_0995_Obj::fillCircle(int x,int y,int diam, colorObj* inColor)									{ fillRoundRect(gX(x),gY(y),diam,diam,diam/2,inColor); }
-void	DFRobot_0995_Obj::drawTriangle(point* pt0,point* pt1,point* pt2,colorObj* inColor) 					{ theTFT->drawTriangle(gX(pt0->x),gX(pt0->y),gX(pt1->x),gX(pt1->y),gX(pt2->x),gX(pt2->y),inColor->getColor16()); }
-void	DFRobot_0995_Obj::fillTriangle(point* pt0,point* pt1,point* pt2,colorObj* inColor)					{ theTFT->fillTriangle(gX(pt0->x),gX(pt0->y),gX(pt1->x),gX(pt1->y),gX(pt2->x),gX(pt2->y),inColor->getColor16()); }
+void	DFRobot_0995_Obj::drawCircle(int x,int y,int rad, colorObj* inColor)										{ theTFT->drawCircle(gX(x),gY(y),rad,inColor->getColor16()); }
+void	DFRobot_0995_Obj::fillCircle(int x,int y,int rad, colorObj* inColor)										{ theTFT->fillCircle(gX(x),gY(y),rad,inColor->getColor16()); }
+void	DFRobot_0995_Obj::drawTriangle(point* pt0,point* pt1,point* pt2,colorObj* inColor) 					{ theTFT->drawTriangle(gP(pt0).x,gP(pt0).y,gP(pt1).x,gP(pt1).y,gP(pt2).x,gP(pt2).y,inColor->getColor16()); }
+void	DFRobot_0995_Obj::fillTriangle(point* pt0,point* pt1,point* pt2,colorObj* inColor)					{ theTFT->fillTriangle(gP(pt0).x,gP(pt0).y,gP(pt1).x,gP(pt1).y,gP(pt2).x,gP(pt2).y,inColor->getColor16()); }
 void	DFRobot_0995_Obj::drawVLine(int x,int y,int height,colorObj* inColor)									{ theTFT->drawFastVLine(gX(x),gY(y),height,sDim(inColor)->getColor16()); }
 void	DFRobot_0995_Obj::drawHLine(int x,int y,int width,colorObj* inColor)										{ theTFT->drawFastHLine(gX(x),gY(y),width,sDim(inColor)->getColor16()); }
 void	DFRobot_0995_Obj::drawLine(int x,int y,int x2,int y2,colorObj* inColor)									{ theTFT->drawLine(gX(x),gY(y),gX(x2),gY(y2),sDim(inColor)->getColor16()); }
