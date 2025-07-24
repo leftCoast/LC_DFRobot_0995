@@ -2,7 +2,7 @@
 #ifndef DFRobot_0995_Obj_h
 #define DFRobot_0995_Obj_h
 
-#include "displayObj.h"
+#include <displayObj.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_ST7789.h> // Hardware-specific library for ST7789
 #include <LC_SPI.h>
