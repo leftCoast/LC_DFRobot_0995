@@ -11,24 +11,19 @@
 #define TFT_WIDTH		172	//< The width of the display
 #define TFT_HEIGHT	320	//< The height of the display
 
-#define PORTRAIT      0  	// Wires up
-#define LANDSCAPE     1  	// Wires left
-#define INV_PORTRAIT  2  	// Wires down
-#define INV_LANDSCAPE 3  	// Wires right
-
 
 extern float	percBlack;
 
 
 class DFRobot_0995_Obj : public displayObj {
 
-  public :
+	public :
   				DFRobot_0995_Obj(byte inCS,byte inRST);
-  virtual	~DFRobot_0995_Obj(void);
+	virtual	~DFRobot_0995_Obj(void);
   
+  	virtual 	bool	begin(void);
 	virtual	int	width(void);
 	virtual	int	height(void);
-	virtual 	bool	begin(void);
 	virtual 	void	setRotation(byte inRotation);
 	virtual 	void	setTextColor(colorObj* tColor);
 	virtual 	void	setTextColor(colorObj* tColor,colorObj* bColor);
